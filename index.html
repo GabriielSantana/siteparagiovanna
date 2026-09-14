@@ -20,7 +20,7 @@
 
   *{ margin:0; padding:0; box-sizing:border-box; }
 
-  html{ scroll-behavior: smooth; }
+  html{ scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
   body{
     background: transparent;
@@ -88,11 +88,13 @@
   }
 
   .hero .names{
-    font-size: clamp(3.2rem, 11vw, 6.5rem);
-    line-height: 1;
+    font-size: clamp(2.6rem, 11vw, 6.5rem);
+    line-height: 1.05;
     color: var(--gold-light);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 0.4em;
     opacity: 0;
     animation: fadeIn 1.6s ease forwards 0.6s;
@@ -389,6 +391,109 @@
   @media (prefers-reduced-motion: reduce){
     *{ animation: none !important; transition: none !important; }
   }
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width: 600px){
+    section{
+      padding: 4.5rem 1.25rem;
+    }
+
+    .hero{
+      padding: 2rem 1.25rem;
+      min-height: 100svh;
+    }
+
+    .hero .kicker{
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      padding: 0 0.5rem;
+    }
+
+    .hero .since{
+      font-size: 0.95rem;
+      padding: 0 0.5rem;
+    }
+
+    .counter-section{
+      padding-top: 2.5rem;
+      padding-bottom: 4rem;
+    }
+
+    .counter-grid{
+      gap: 1.2rem 0.9rem;
+    }
+
+    .counter-unit{
+      min-width: 60px;
+    }
+
+    .counter-unit .num{
+      font-size: clamp(1.8rem, 9vw, 2.6rem);
+    }
+
+    .counter-unit .unit-label{
+      font-size: 0.6rem;
+    }
+
+    .section-title{
+      font-size: clamp(1.7rem, 7vw, 2.2rem);
+      margin-bottom: 2.2rem;
+    }
+
+    .timeline{
+      padding-left: 1.5rem;
+    }
+
+    .timeline::before{
+      left: 3px;
+    }
+
+    .timeline-item{
+      margin-bottom: 2.4rem;
+    }
+
+    .timeline-item::before{
+      left: -1.5rem;
+      width: 7px;
+      height: 7px;
+    }
+
+    .timeline-item .t-date{
+      font-size: 0.66rem;
+    }
+
+    .timeline-item p{
+      font-size: 0.95rem;
+    }
+
+    .gallery-grid{
+      gap: 0.4rem;
+    }
+
+    .letter-section{
+      padding-top: 3rem;
+      padding-bottom: 5.5rem;
+    }
+
+    .letter-box{
+      padding: 2.5rem 0;
+    }
+
+    .letter-box p{
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+
+    .letter-sign{
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (max-width: 380px){
+    .gallery-grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 </style>
 </head>
 <body>
@@ -444,12 +549,12 @@
   <h2 class="section-title">Nossos momentos</h2>
   <p class="gallery-sub">cada foto, um pedacinho da nossa história</p>
   <div class="gallery-grid">
-    <div class="ph"><img src="images/1.jpg" alt="1"></div>
-    <div class="ph"><img src="images/2.jpg" alt="2"></div>
-    <div class="ph"><img src="images/3.jpg" alt="3"></div>
-    <div class="ph"><img src="images/8.jpg" alt="4"></div>
-    <div class="ph"><img src="images/5.jpg" alt="5"></div>
-    <div class="ph"><img src="images/6.jpg" alt="6"></div>
+    <div class="ph"><img src="images/1.jpg" alt="Gabriel e Giovanna"></div>
+    <div class="ph"><img src="images/2.jpg" alt="Gabriel e Giovanna"></div>
+    <div class="ph"><img src="images/3.jpg" alt="Gabriel e Giovanna"></div>
+    <div class="ph"><img src="images/5.jpg" alt="Gabriel e Giovanna"></div>
+    <div class="ph"><img src="images/6.jpg" alt="Gabriel e Giovanna"></div>
+    <div class="ph"><img src="images/7.jpg" alt="Gabriel e Giovanna"></div>
   </div>
 </section>
 
